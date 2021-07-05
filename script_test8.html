@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var stNum = Number(prompt("수강생은 몇 명입니까?"));
+        var colNum = Number(prompt("한줄에 몇 명씩 있습니까?"));
+
+        if (stNum % colNum == 0)
+            rowNum = parseInt(stNum / colNum);
+        else
+        rowNum = parseInt(stNum / colNum) = 1;
+
+        for (i= 0; i < rowNum; i++) {
+            for ( j = 1; j <= colNum; j++){
+                stId = i * colNum + j;
+                if (stId > stNum) break;
+                document.write("컴공 " + stId + "번");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

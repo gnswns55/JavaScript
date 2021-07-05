@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리형 예제</title>
+</head>
+<body>
+    <p> 자바스크립트를 좋아하시나요?</p>
+    <form>
+        <input type="button" id="buttl1" value="YES" onclick="likejs(true)">
+        <input type="button" id="buttl2" value="NO" onclick="likejs(false)">
+    </form>
+    <div id="result"></div>
+    <script>
+        function likejs(choice) {
+            var choice;
+            if (choice == true) {
+                alert("자바스크립트로 다이내믹한 웹을 만들어보세요");
+            }
+            else {
+                alert("이제부터 조금씩 자바스크립트와 친해보세요");
+            }
+        }
+    //function은 객체 함수 타입이다.
+        
+    </script>
+</body>
+</html>

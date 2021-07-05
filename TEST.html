@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName를 이용한 예제</title>
+    <script>
+        function change(newSrc){
+            letters=document.getElementsByTagName("img");
+            letters[4].src=newSrc;
+        }
+    </script>
+</head>
+<body>
+    <h1>웹표준 기술은?</h1>
+    <p>숫자 4를 클릭하세요.</p>
+    <img src="h.jpg">
+    <img src="t.jpg">
+    <img src="m.jpg">
+    <img src="l.jpg">
+    <img src="4.jpg" onclick="change('5.jpg')">
+</body>
+</html>

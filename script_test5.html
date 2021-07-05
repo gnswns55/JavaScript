@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case를 이용한 실습실 안내 예제</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+            color: black;
+        }
+        p{
+            margin-top: 80px;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+        }
+        big{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var subj = prompt("학과 선택(1: 전기전자, 2: 건축공학, 3: 컴퓨터공학, 4: 신소재공학");
+
+        switch(subj){
+            case "1": {
+                document.write("<p>전기전자공학과 실습실은<big>2011호</big>입니다.</p>");
+                break;
+            }
+            case "2" : {
+                document.write("<p>건축공학과 실습실은<big>2012호</big>입니다.</p>");
+                break;
+            }
+            case "3" : {
+                document.write("<p>컴퓨터공학과 실습실은<big>2013호</big>입니다.</p>");
+                break;
+            }
+            case "4" : {
+                document.write("<p>신소재공학과 실습실은<big>2011호</big>입니다.</p>");
+                break;
+            }
+            default : {
+                document.write("<p>잘못 입력하셨습니다.</p>")
+            }
+        }
+    </script>
+</body>
+</html>
