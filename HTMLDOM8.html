@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새로운 노드 추가하기 예제</title>
+    <script>
+        function addParagraph() {
+            var newP = document.createElement("p");
+            var pNode = document.createTextNode("최신 웹 기술을 함께 공부할 회원을 모집합니다.");
+
+            newP.appendChild(pNode);
+            //appendChild가 노드와 노드끼리 이어주는 역할을 한다.
+
+            document.getElementById("info").appendChild(newP);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="ttl">스터디 회원 모집</h1>
+    <a href="#" onclick="addParagraph()"><p>더보기!</p></a>
+    <div id="info"></div>
+</body>
+</html>

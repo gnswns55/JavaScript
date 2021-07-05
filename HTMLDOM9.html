@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새로운 노드 이미지 추가를 이용한 예제</title>
+    <script>
+        function addImg() {
+            var newImg = document.createElement("img");
+            var attNode = document.createAttribute("src");
+            attNode.value = "logo.png"
+            //logo이미지를 불러오기
+            var altNode = document.createAttribute("alt");
+            altNode.value = "HTML5 공식로고";
+            //alt는 이미지에 대한 설명을 덧붙인 것
+            newImg.setAttributeNode(attNode);
+            // newImg랑 attNode를 이은것
+            newImg.setAttributeNode(altNode);
+
+            document.getElementById("info").appendChild(newImg);
+        }
+    </script>
+</head>
+<body>
+    <h1>스터디 회원 모집</h1>
+    <a href="#" onclick="addImg()"><p>이미지 보기</p></a>
+    <!--a태그로 불러오게 한 기능-->
+    <div id="info"></div>
+</body>
+</html>
