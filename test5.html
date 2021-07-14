@@ -6,57 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        count = 0;
-        var timerId = null;
-
-        function Rand(min, max) {
-             min = Math.ceil(min);
-             max = Math.floor(max);
-             return Math.floor(Math.random() * (max - min)) + min;
-        }
-        function start() {
-            count1 = Auto_change_Img(Rand(0,4),"num1");
-            count2 = Auto_change_Img(Rand(0,4),"num2");
-            count3 = Auto_change_Img(Rand(0,4),"num3");
-            timerId = setTimeout(start, 50);
-        }
-        function stop() {
-            if (count1 == count2 && count2 == count3)
-            {
-                score = 100;
-            }
-            else if(count1 == count2 || count2 == count3 || count1 == count3)
-            {
-                score = 60;
-            }
-            else{
-                score = 0;
-            }
-            game_count++j;
-            sum_score += score;
-            $('#score').text('점수 : ' + score + ', 횟수: ' + game_count+ ", 누적 점수 : "+sum_score);
-
-
-            clearTimeout(timerId);
-        }
-        function Auto_change_Img(count,id_value) {
-            var myNum = document.getElementById(id_value);
-            str = ""+count+".png";
-            myNum.src = str;
-            return count;
+        function change(index, newSrc) {
+            letters=document.getElementsByTagName("img");
+            letters[index].src = newSrc;
         }
     </script>
-
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+    </style>
 </head>
 <body>
-        <input type="button" value="시작" onclick="start()">
-        <input type="button" value="멈춤" onclick="stop()">
-    
-        <div>
-            <img src="0.png" id="num1" width="200">
-            <img src="0.png" id="num2" width="200">
-            <img src="0.png" id="num3" width="200">
-        </div>
-       
+    <center>
+    <h1>상품을 골라보세요</h1>
+    <h2><b>아래 이미지를 클릭해보세요</b></h2>
+    <h3><b><span style="color: red;">사과</span>가 나오면 통과</b></h3>
+        <table>
+            <tr><img src="/item.png" width="100" onclick="change(0, 'cross-sign.png')">;</tr>
+            <tr><img src="/item.png" width="100" onclick="change(1, '사과.png')">;</tr>
+            <tr><img src="/item.png" width="100" onclick="change(2, '사과.png')">;</tr>
+            <td><img src="/item.png" width="100" onclick="change(3, '사과.png')">;</td>
+            <td><img src="/item.png" width="100" onclick="change(4, 'cross-sign.png')">;</td>
+
+        </table>
+    </center>
 </body>
 </html>
